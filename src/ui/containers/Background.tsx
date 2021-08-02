@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import blobsDark from '../../assets/icons/blobs_dark.svg'
 import blobsLight from '../../assets/icons/blobs_light.svg'
 
-
 const Background = styled.div<{theme?: 'dark' | 'light'}>`
   min-height: 100vh;
   height: 100%;

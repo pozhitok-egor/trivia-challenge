@@ -26,52 +26,57 @@ const Statistics: React.FC = () => {
 
   const dispatch = useDispatch()
 
+  const playButtonHandler = () => {
+    dispatch(setGamestate('menu'))
+    dispatch(clearStatistics())
+  }
+
   return (
     <Background theme='dark'>
       <Container>
-        <Close
-            width={25}
-            height={25}
-        />
+        <Close width={25} height={25} />
         <Score>
           <Avatar src={avatar} alt='Avatar'/>
           You scored
           <Number>
             <Correct>
-            {twoDigits(correct)}
+              {twoDigits(correct)}
             </Correct>
             /{twoDigits(total)}
           </Number>
         </Score>
         <Stars>
           { answers &&
-          [...answers].sort((a, b) => {
-            if (a.correct === true && b.correct === false) {
-              return -1
-            }
-            if (a.correct === false && b.correct === true) {
-              return 1
-            }
-            return 0
-          })
-          .map((question, index) =>
-            <Star key={index} checked={question.correct}/>
-          )
+            [...answers].sort((a, b) => {
+              if (a.correct === true && b.correct === false) {
+                return -1
+              }
+              if (a.correct === false && b.correct === true) {
+                return 1
+              }
+              return 0
+            })
+            .map((question, index) =>
+              <Star key={index} checked={question.correct}/>
+            )
           }
         </Stars>
         <Answers>
           { answers &&
-          answers.map((question, index) =>
-            <Answer key={index} correct={question.correct}>{decodeURIComponent(question.question)}
-            { question.correct ? <img src={check} alt='correct'/> : <Cross fill='#4953BE'/>}
-            </Answer>
-          )
+            answers.map((question, index) =>
+              <Answer key={index} correct={question.correct}>
+                {decodeURIComponent(question.question)}
+                { question.correct ?
+                  <img src={check} alt='correct'/> :
+                  <Cross fill='#4953BE'/>
+                }
+              </Answer>
+            )
           }
         </Answers>
-        <Button style={{marginBottom: '50px'}} onClick={() => {
-          dispatch(setGamestate('menu'))
-          dispatch(clearStatistics())
-        }}>Play again</Button>
+        <Button style={{marginBottom: '50px'}} onClick={playButtonHandler}>
+          Play again
+        </Button>
       </Container>
     </Background>
   );

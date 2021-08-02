@@ -19,7 +19,6 @@ const Game: React.FC = () => {
   const { questions, error, loading } = useTypedSelector(state => state.questions);
   const  [currentQuestion, setCurrentQuestion] = useState<IQuestion>()
 
-
   const dispatch = useDispatch()
 
   const buttonHandler = (correct: boolean) => {
@@ -45,12 +44,9 @@ const Game: React.FC = () => {
   return (
     <Background theme='light'>
       <Container>
-        <Close
-          fill='#4953BE'
-          width={25}
-          height={25}
-        />
+        <Close fill='#4953BE' width={25} height={25}/>
         { loading && <Loader />}
+        { error && <Error>{error}</Error>}
         { currentQuestion &&
           <>
             <Header>
@@ -71,7 +67,6 @@ const Game: React.FC = () => {
             </Buttons>
           </>
         }
-        {error && <Error>{error}</Error>}
       </Container>
     </Background>
   );

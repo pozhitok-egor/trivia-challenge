@@ -73,7 +73,7 @@ const Main: React.FC = () => {
             </InputTitle>
             <Input name='amount' id='amount' type='number' min='1' max='50' step='1' defaultValue={amount} onChange={amountHandler}/>
           </Label>
-          {errorText && <Error>{errorText}</Error>}
+          { errorText && <Error>{errorText}</Error> }
         </Form>
         <Button onClick={() => dispatch(setGamestate('game'))}>True</Button>
       </Container>

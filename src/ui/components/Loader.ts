@@ -12,6 +12,7 @@ const Loader = styled.div`
   position:relative;
   width: 20px;
   z-index:1;
+
   &:before {
     animation:spin-reverse 2s infinite linear;
     border:solid 5px transparent;
@@ -26,6 +27,7 @@ const Loader = styled.div`
     top: -15px;
     left: -15px;
   }
+
   &:after {
     animation:spin 1.5s infinite linear;
     border:solid 5px transparent;
@@ -40,17 +42,18 @@ const Loader = styled.div`
     top: -25px;
     left: -25px;
   }
+
   @keyframes spin {
     100% {
       transform:rotate(360deg);
     }
   }
+
   @keyframes spin-reverse {
     100% {
       transform:rotate(-720deg);
     }
   }
 `;
-
 
 export default Loader;
