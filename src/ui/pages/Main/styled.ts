@@ -8,6 +8,14 @@ export const Header = styled.div`
   font-size: 46px;
   font-weight: bold;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -38,6 +46,14 @@ export const InputTitle = styled.div`
   font-size: 15px;
   font-weight: bold;
   color: #F7A491;
+
+  @media screen and (max-width: 425px) {
+    font-size: 13px;
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
 `;
 
 export const Error = styled.div`

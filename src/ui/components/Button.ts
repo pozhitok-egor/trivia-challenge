@@ -18,6 +18,10 @@ const Button = styled.button<ColorProps>`
   font-size: 21px;
   line-height: 150%;
 
+  @media screen and (max-width: 425px) {
+    font-size: 15px;
+  }
+
   &:disabled {
     filter: grayscale(0.6);
   }

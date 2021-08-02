@@ -14,11 +14,25 @@ export const Title = styled.div`
   font-size: 81px;
   font-weight: 700;
   color: #4953BE;
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 31px;
+  }
 `;
 
 export const Level = styled.div`
   font-size: 28px;
   letter-spacing: 0.5em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 13px;
+  }
 `;
 
 export const Progress = styled.div`
@@ -26,6 +40,9 @@ export const Progress = styled.div`
   max-width: 446px;
   font-weight: 700;
   font-size: 20px;
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
 `;
 
 export const Number = styled.div`
@@ -36,12 +53,19 @@ export const Number = styled.div`
 export const Current = styled.div`
   font-size: 28px;
   color: #FF7878;
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 
 export const Question = styled.div`
   max-width: 630px;
   font-size: 31px;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+    text-align: left;
+  }
 `;
 
 export const Bar = styled.span<BarProps>`

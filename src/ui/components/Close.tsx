@@ -30,6 +30,13 @@ const CloseButton = styled.button`
   right: 20px;
   border: none;
   background: transparent;
+
+  @media screen and (max-width: 425px) {
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
 `;
 
 export default Close

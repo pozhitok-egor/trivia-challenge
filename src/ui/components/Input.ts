@@ -15,6 +15,10 @@ const Input = styled.input`
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
+
+  @media screen and (max-width: 425px) {
+    font-size: 13px;
+  }
 `;
 
 export default Input;

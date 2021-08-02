@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../../../core/hooks/useTypedSelector';
 import { setGamestate } from '../../../core/store/actions/gamestate';

@@ -23,6 +23,10 @@ const Select = styled.select`
   & option {
     color: #000;
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: 13px;
+  }
 `;
 
 export default Select;
