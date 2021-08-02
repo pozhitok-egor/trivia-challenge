@@ -22,7 +22,7 @@ const Main: React.FC = () => {
 
   const difficultyHandler = (e:React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value
-    if (value === 'easy' || value === 'medium' || value === 'hard')
+    if (value === 'easy' || value === 'hard')
       {
         dispatch(setDifficulty(value))
       }
@@ -63,7 +63,6 @@ const Main: React.FC = () => {
             </InputTitle>
             <Select name='difficulty' id='difficulty' onChange={difficultyHandler} defaultValue={difficulty}>
               <option value='easy'>easy</option>
-              <option value='medium'>medium</option>
               <option value='hard'>hard</option>
             </Select>
           </Label>

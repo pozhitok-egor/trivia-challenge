@@ -3,7 +3,7 @@ export enum SettingsActionType {
   SET_AMOUNT = 'SETTINGS/SET_AMOUNT'
 }
 
-export type Difficulty = 'easy' | 'medium' | 'hard'
+export type Difficulty = 'easy' | 'hard'
 
 export interface Settings {
   difficulty: Difficulty;
