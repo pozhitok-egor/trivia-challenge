@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Trivia Challenge
+Test web application
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Getting Started](#getting-started)
+  - [Running the project](#running-the-project)
+- [Problems](#problems)
+- [Built with](#built-with)
+## Getting Started
+1. Make sure you have `Node.js` and `npm` installed. [Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+2. Clone this repo into your local machine
+  `https://github.com/pozhitok-egor/trivia-challenge.git`
+#### Running the project
+- Run in terminal `npm i` to install all dependencies into `node_modules`
+- Run in terminal `npm start` to start server with the application
+## Problems
+During the development process, there were some problems with the task, which could be solved only after consulting.
+#### Design problems
+- **It is not clear whether it should be closed on the screen with a question.**
+There is no cross icon on the screen with the question in the desktop version. But there is on the mobile screen.
+- **It is not clear how to make blobs.**
+Blobs on all screens are different, but on the desktop version they are the same on the settings and statistics screens.
+- **It is not clear how to do list on results screen.**
+There are 10 questions in the desktop version, 8 of which are answered correctly. At the same time, there are only 6 colored stars. There are 6 correct answers on the mobile version. But all the same, there are 7 questions everywhere in the list.
+- **Different width of elements on screens.**
+- **Question align different on mobile and desktop.**
+- **The task specifies that all graphic elements must be in svg format. However, the Trivia logo is not presented in a vector format.**
+- **The design indicates the number of 2,889,868.**
+This is a little confusing, because the number of possible API questions is 50.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Task problems
+- **It is unclear what `"Input box should not be hidden by keyboard"` means.**
+- **The number of allowed anount of questions is not specified.**
+- **Difficulty is only `easy` and `hard`. The API has `medium`**
+- **It is not specified what the levels are.**
+- **It is not specified whether routing should be used**
+## Built with
+#### API
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Trivia API](https://opentdb.com/)
+#### Libraries:
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/), [redux-thunk](https://github.com/reduxjs/redux-thunk)
+- [styled-components](https://styled-components.com/)
+- [axios](https://axios-http.com/)
